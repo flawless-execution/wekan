@@ -2111,6 +2111,8 @@ function cardCustomFields(userId, doc, fieldNames, modifier) {
             value,
             activityType: 'setCustomField',
             boardId: doc.boardId,
+            listId: doc.listId,
+            swimlaneId: doc.swimlaneId,
             cardId: doc._id,
           };
           Activities.insert(act);
@@ -2132,6 +2134,8 @@ function cardCustomFields(userId, doc, fieldNames, modifier) {
             userId,
             customFieldId,
             activityType: 'unsetCustomField',
+            listId: doc.listId,
+            swimlaneId: doc.swimlaneId,
             boardId: doc.boardId,
             cardId: doc._id,
           };
